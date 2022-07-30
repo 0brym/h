@@ -3,6 +3,8 @@ var h = h || {};
 h.log = x => console.log(x);
 h.msg = x => window.alert(x);
 h.pr = (x, y) => window.prompt(x,y);
+h.scroll=num=>window.scroll({top:num,behavior:"smooth"});
+h.ref=()=>document.referrer;
 h.element = x => document.createElement(x);
 h.getEl = x => document.getElementById(x);
 h.val = x => h.getEl(x).value;
@@ -33,3 +35,5 @@ h.link=(a,b,c,d,e,f,g,i)=>{
 }
 h.css=path=>h.link("rel","stylesheet","href",path,"media","none","onload","if(media!='all')media='all'");
 h.imp=async(target,src)=>{fetch(src).then((res)=>res.text()).then((html)=>h.set(target,html)).catch((err)=>h.showToast(err));}
+h.elBg=(x,y,z)=>h.styles(x,`background-image:url("${y}");background-size:cover;background-position:center center;background-blend-mode:"${z}";`);
+

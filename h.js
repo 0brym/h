@@ -1,5 +1,6 @@
 // enjoy
 var h=h||{};
+h.site=()=>location.origin+location.pathname;
 h.log=x=>console.log(x);
 h.msg=x=>window.alert(x);
 h.pr=(x,y)=>window.prompt(x,y);
@@ -7,6 +8,7 @@ h.scroll=num=>window.scroll({top:num,behavior:"smooth"});
 h.ref=()=>document.referrer;
 h.title=x=>document.title=x;
 h.element=x=>document.createElement(x);
+h.js=file=>{let js=h.element("script");js.src=h.site()+file;document.body.appendChild(js);}
 h.getEl=x=>document.getElementById(x);
 h.val=x=>h.getEl(x).value;
 h.addEl=(tag,id,where)=>{let t=h.getEl(where);let x=h.element(tag);x.id=id;t.appendChild(x);}

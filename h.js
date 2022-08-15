@@ -16,6 +16,7 @@ h.set=(elem,data)=>h.getEl(elem).innerHTML=data;
 h.add=(elem,msg)=>!elem?h.log(`Error (h.add): Element '${elem}' not found`):h.getEl(elem).innerHTML+=msg;
 h.remove=id=>h.getEl(id).remove();
 h.styles=(id,styles)=>h.getEl(id).style=styles;
+h.styleTag=x=>document.head.insertAdjacentHTML("beforeend",`<style>${x}</style>`);
 h.classes=(id,classes)=>h.getEl(id).className=classes;
 h.save=(a,b)=>localStorage.setItem(a,b);
 h.get=x=>localStorage.getItem(x);

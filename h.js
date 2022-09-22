@@ -12,7 +12,7 @@ h.js=file=>{let js=h.element("script");js.src=h.site()+file;document.body.append
 h.getEl=x=>document.getElementById(x);
 h.val=x=>h.getEl(x).value;
 h.addEl=(tag,id,where)=>{let t=h.getEl(where);let x=h.element(tag);x.id=id;t.appendChild(x);}
-h.set=(elem,data)=>h.getEl(elem).innerHTML=data;
+h.set=(elem,data)=>{h.getEl(elem).innerHTML=data;}
 h.add=(elem,msg)=>!elem?h.log(`Error (h.add): Element '${elem}' not found`):h.getEl(elem).innerHTML+=msg;
 h.remove=id=>h.getEl(id).remove();
 h.styles=(id,styles)=>h.getEl(id).style=styles;

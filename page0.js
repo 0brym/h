@@ -24,6 +24,5 @@ h.add("img",`
 h.addEl("div","imgtest","grid");
 h.styles("imgtest",centre);
 h.add("imgtest",`
-	<a href="javascript:h.set('imgtest',h.img('https://c.tadst.com/gfx/600x337/full-moon-phase2.jpg','moon'));">Click to load image</a>
-	<div>Look at Rock Rippers h.img for the answer!</div>
+	<a href="javascript:h.set('imgtest',h.img('https://c.tadst.com/gfx/600x337/full-moon-phase2.jpg','moon'));">Click to add another moon!</a>
 `);

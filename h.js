@@ -1,5 +1,5 @@
 // enjoy
-var h=h||{};
+let h={};
 h.site=()=>location.origin+location.pathname;
 h.log=x=>console.log(x);
 h.msg=x=>window.alert(x);

@@ -10,10 +10,12 @@ h.title=x=>document.title=x;
 h.element=x=>document.createElement(x);
 h.js=file=>{let js=h.element("script");js.src=h.site()+file;document.body.appendChild(js);}
 h.getEl=x=>document.getElementById(x);
+h.text=x=>document.createTextNode(x);
 h.val=x=>h.getEl(x).value;
 h.addEl=(tag,id,where)=>{let t=h.getEl(where);let x=h.element(tag);x.id=id;t.appendChild(x);}
 h.set=(elem,data)=>{h.getEl(elem).innerHTML=data;}
 h.add=(elem,msg)=>!elem?h.log(`Error (h.add): Element '${elem}' not found`):h.getEl(elem).innerHTML+=msg;
+h.addTxt=(elem,txt)=>!elem?h.log(`Error (h.addTxt): '${elem}' not found`):h.getEl(elem).textContent=h.text(txt);
 h.remove=id=>h.getEl(id).remove();
 h.styles=(id,styles)=>h.getEl(id).style=styles;
 h.styleTag=x=>document.head.insertAdjacentHTML("beforeend",`<style>${x}</style>`);

@@ -26,3 +26,6 @@ h.styles("imgtest",centre);
 h.add("imgtest",`
 	<a href="javascript:h.set('imgtest',h.img('https://c.tadst.com/gfx/600x337/full-moon-phase2.jpg','moon'));">Click to add another moon!</a>
 `);
+h.addEl("input","no-xss","grid");
+h.getEl("no-xss").setAttribute("placeholder","no-xss input");
+h.getEl("no-xss").setAttribute("onfocusout",`h.val('no-xss')`);

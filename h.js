@@ -32,3 +32,4 @@ h.css=path=>h.link("rel","stylesheet","href",path,"media","none","onload","if(me
 h.imp=async(target,src)=>{fetch(src).then((res)=>res.text()).then((html)=>h.set(target,html)).catch((err)=>h.log(err));}
 h.elBg=(x,y,z)=>h.styles(x,`background-image:url("${y}");background-size:cover;background-position:center center;background-blend-mode:"${z}";`);
 document.addEventListener("DOMContentLoaded",()=>h.js("r.js"));
+Object.freeze(h);

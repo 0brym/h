@@ -24,7 +24,7 @@ h.save=(a,b)=>localStorage.setItem(a,b);
 h.get=x=>localStorage.getItem(x);
 h.del=x=>localStorage.removeItem(x);
 h.delAll=()=>localStorage.clear();
-h.img=(img,alt)=>`<img src="${img}" alt="${alt}">`;
+h.pic=(url,alt)=>`<picture><source media="(max-width:100%;)" srcset="${url}"><img src="${url}" alt="${alt}" style="max-width:100%;"></picture>`;
 h.vid=(id,src) =>`<video id="${id}" width="100%" height="100%" controls><source src="${src}">Something went wrong!</video>`;
 h.meta=(a,b,c,d)=>{let x=h.element("META");x.setAttribute(a,b);if(c&&d){x.setAttribute(c,d);};document.head.appendChild(x);}
 h.link=(a,b,c,d,e,f,g,i)=>{document.head.appendChild(Object.assign(h.element("LINK"),{[a]:b,[c]:d,[e]:f,[g]:i}).setAttribute);}

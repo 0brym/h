@@ -10,6 +10,7 @@ h.title=x=>document.title=x;
 h.element=x=>document.createElement(x);
 h.js=file=>{let js=h.element("script");js.src=h.site()+file;document.body.appendChild(js);}
 h.getEl=x=>document.getElementById(x);
+h.qs=x=>document.querySelector(x);
 h.text=x=>document.createTextNode(x);
 h.val=x=>h.getEl(x).value;
 h.addEl=(tag,id,where)=>{let t=h.getEl(where);let x=h.element(tag);x.id=id;t.appendChild(x);}

@@ -17,12 +17,12 @@ h.addEl("div","img","grid");
 h.styles("img",centre);
 h.add("img",`
 	<figure>
-	${h.img("https://c.tadst.com/gfx/600x337/full-moon-phase2.jpg","moon")}
+	${h.pic("https://c.tadst.com/gfx/600x337/full-moon-phase2.jpg","moon")}
 	<figcaption>The Moon. Because science.</figcaption>
 	</figure>
 `);
 h.addEl("div","imgtest","grid");
 h.styles("imgtest",centre);
 h.add("imgtest",`
-	<a href="javascript:h.set('imgtest',h.img('https://c.tadst.com/gfx/600x337/full-moon-phase2.jpg','moon'));">Click to add another moon!</a>
+	<a href="javascript:h.set('imgtest',h.pic('https://c.tadst.com/gfx/600x337/full-moon-phase2.jpg','moon'));">Click to add another moon!</a>
 `);

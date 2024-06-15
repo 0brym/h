@@ -1,6 +1,6 @@
 h.title("Demo Page");
-h.meta("name","description","content","Demo Single Page Application created using h.js");
-h.meta("name","keywords","content","demo,vanilla,javascript,js,dom");
+h.headtag("META","name","description","content","Demo Single Page Application created using h.js");
+h.headtag("META","name","keywords","content","demo,vanilla,javascript,js,dom");
 
 document.body.style.backgroundColor="#343330";
 h.styleTag("a{color:#6ED9E5;}");

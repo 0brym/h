@@ -27,8 +27,7 @@ h.del=x=>localStorage.removeItem(x);
 h.delAll=()=>localStorage.clear();
 h.pic=(url,alt)=>`<picture><source media="(max-width:100%;)" srcset="${url}"><img src="${url}" alt="${alt}" style="max-width:100%;"></picture>`;
 h.vid=(id,src) =>`<video id="${id}" width="100%" height="100%" controls><source src="${src}">Something went wrong!</video>`;
-h.meta=(a,b,c,d)=>{let x=h.element("META");x.setAttribute(a,b);if(c&&d){x.setAttribute(c,d);};document.head.appendChild(x);}
-h.link=(...a)=>{let x=h.element("LINK");a.map((v,i)=>i%2&&x.setAttribute(a[i-1],v));document.head.appendChild(x);};
+h.headtag=(tag,...a)=>{let x=h.element(tag);a.map((v,i)=>i%2&&x.setAttribute(a[i-1],v));document.head.appendChild(x);}
 h.css=path=>h.link("rel","stylesheet","href",path,"media","none","onload","if(media!='all')media='all'");
 h.imp=async(target,src)=>{fetch(src).then((res)=>res.text()).then((html)=>h.set(target,html)).catch((err)=>h.log(err));}
 h.elBg=(x,y,z)=>h.styles(x,`background-image:url("${y}");background-size:cover;background-position:center center;background-blend-mode:"${z}";`);

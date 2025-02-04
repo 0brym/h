@@ -17,7 +17,7 @@ h.addEl=(tag,id,where)=>{let t=h.getEl(where);let x=h.element(tag);x.id=id;t.app
 h.set=(elem,data)=>{h.getEl(elem).innerHTML=data;}
 h.add=(elem,msg)=>!elem?h.log(`Error (h.add): Element '${elem}' not found`):h.getEl(elem).innerHTML+=msg;
 h.addTxt=(elem,txt)=>!elem?h.log(`Error (h.addTxt): '${elem}' not found`):h.getEl(elem).textContent=h.text(txt);
-h.remove=id=>h.getEl(id).remove();
+h.remove=(...s)=>s.forEach(sel=>document.querySelector(sel)?.remove());
 h.styles=(id,styles)=>h.getEl(id).style=styles;
 h.styleTag=x=>document.head.insertAdjacentHTML("beforeend",`<style>${x}</style>`);
 h.classes=(id,classes)=>h.getEl(id).className=classes;
